@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bfae9a327dc1694eab1c35b90933903, type: 3}
+  m_Name: Spell Setting Heal
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 0}
+  animationTimer: {fileID: 11400000, guid: d5c801f0399bb504e9c35e66e747cafb, type: 2}
+  timeBetweenUse: 0.046
