@@ -31,5 +31,6 @@ public class Health_Player : Health
     {
         base.Kill();
         animator.Play("die");
+        EventHandler.PlayerDeath();
     }
 }

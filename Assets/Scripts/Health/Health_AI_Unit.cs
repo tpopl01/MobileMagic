@@ -36,6 +36,7 @@ public class Health_AI_Unit : Health_AI
     {
         base.Kill();
         animator.Play("die");
+        EventHandler.Death();
     }
 
     public override void InitHealth(int maxHealth)

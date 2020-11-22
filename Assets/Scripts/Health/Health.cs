@@ -62,7 +62,7 @@ public class Health : MonoBehaviour
         IsDead = true;
         health = 0;
         effectDeath.SetActive(true);
-
+        
     }
 
 }

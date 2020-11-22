@@ -5,18 +5,35 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
-    [HideInInspector]public Wave[] w;
+    Wave[] w;
     int index = 0;
     ObjectPool_AI[] objectPools;
     ObjectPool_AI_Pickables pickablePool;
     Timer spawnTimer = new Timer(0);
     [SerializeField]Transform[] spawnSpots;
     [SerializeField] Transform[] pickableSpots;
+    int unitsRemaining;
+
+    public void SetWaves(Wave[] ws)
+    {
+        w = ws;
+        for (int i = 0; i < w.Length; i++)
+        {
+            unitsRemaining += w[i].spawnPattern.Length;
+        }
+    }
+
+    //public static WaveManager instance;
+    //private void Awake()
+    //{
+    //    instance = this;
+    //}
 
     void Start()
     {
         objectPools = GetComponentsInChildren<ObjectPool_AI>();
         pickablePool = GetComponentInChildren<ObjectPool_AI_Pickables>();
+        EventHandler.OnDeath += OnDeath;
     }
     
     void Update()
@@ -32,6 +49,25 @@ public class WaveManager : MonoBehaviour
             }
         }
     }
+
+    public void OnDeath()
+    {
+        unitsRemaining--;
+        if(unitsRemaining <= 0)
+        {
+            //End Level
+            Debug.Log("Level Complete");
+
+            //start level ended event
+            EventHandler.LevelComplete();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        EventHandler.OnDeath -= OnDeath;
+    }
+
 }
 
 [System.Serializable]

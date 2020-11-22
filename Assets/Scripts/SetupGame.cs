@@ -20,6 +20,12 @@ public class SetupGame : MonoBehaviour
     {
         Setup();
         coinText.text = COIN + coins.ToString();
+        EventHandler.OnCoins += AddCoins;
+    }
+
+    private void OnDestroy()
+    {
+        EventHandler.OnCoins -= AddCoins;
     }
 
     void Setup()
@@ -38,11 +44,12 @@ public class SetupGame : MonoBehaviour
         }
 
         WaveManager wM = GetComponentInChildren<WaveManager>();
-        wM.w = fromJSON;
+        wM.SetWaves(fromJSON);
+     //   wM.w = fromJSON;
 
     }
 
-    public void AddCoins(int amount)
+    private void AddCoins(int amount)
     {
         coins+= amount;
         coinText.text = COIN + coins.ToString();

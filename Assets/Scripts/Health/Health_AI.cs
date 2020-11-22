@@ -17,6 +17,6 @@ public class Health_AI : Health
     {
         base.Kill();
         UnitManager.instance.RemoveHealthAI(this);
-        SetupGame.instance.AddCoins(coins);
+        EventHandler.Coins(coins);
     }
 }

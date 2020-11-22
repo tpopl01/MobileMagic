@@ -18,5 +18,6 @@ public class UIShop : UIItem
     public override void Use()
     {
         PanelManager.instance.Purchase(item_name, price);
+        EventHandler.Coins(-price);
     }
 }
