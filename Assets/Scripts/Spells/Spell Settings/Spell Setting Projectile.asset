@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3916215e541efb74cb168dac6f68b6c1, type: 3}
   m_Name: Spell Setting Projectile
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: a2ae90e42daaf4723a539c25867d37fd, type: 3}
   animationTimer: {fileID: 11400000, guid: 39d8e30064ef1494ebbdafbe6b0f1209, type: 2}
   timeBetweenUse: 0.771

@@ -65,6 +65,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 11400000, guid: e62c08865471cdf478c71082c2529bbd, type: 2}
   coins: 10
+  audioHandler: {fileID: 11400000, guid: 713571850dc16cf4e8325e894ea66aff, type: 2}
   pool: {fileID: 0}
   despawnTime: 3
 --- !u!1001 &8738902417837418361

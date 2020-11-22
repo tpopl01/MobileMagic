@@ -21,9 +21,12 @@ public class AIController_Unit : AIController
 
     protected override void Attack()
     {
-        base.Attack();
-        animator.Play("attack_0" + Random.Range(1, aISettings.attackCount + 1));
-        target.DamageHealth(damageAmount);
+        if (h.CanMove)
+        {
+            base.Attack();
+            animator.Play("attack_0" + Random.Range(1, aISettings.attackCount + 1));
+            target.DamageHealth(damageAmount);
+        }
     }
 
     protected override void MoveForward()

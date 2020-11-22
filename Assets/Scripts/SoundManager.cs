@@ -11,6 +11,18 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioClip coinPickup;
     [SerializeField] AudioSource audioSource;
 
+    public static SoundManager instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    public AudioSource GetAudioSource()
+    {
+        return audioSource;
+    }
+
     private void Start()
     {
         EventHandler.OnLevelBegin += Begin;

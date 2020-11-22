@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bfae9a327dc1694eab1c35b90933903, type: 3}
   m_Name: Spell Setting Heal
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 4253ea676060e49dd9488f73d692ea2a, type: 3}
   animationTimer: {fileID: 11400000, guid: d5c801f0399bb504e9c35e66e747cafb, type: 2}
   timeBetweenUse: 0.046

@@ -74,4 +74,11 @@ public class LevelCompleteUI : MonoBehaviour
         coins += amount;
         coinText.text = coins.ToString();
     }
+
+    public void NextLevel()
+    {
+        defeat.SetActive(false);
+        victory.SetActive(false);
+    }
+
 }

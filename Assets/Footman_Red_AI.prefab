@@ -61,6 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 11400000, guid: 552e48b7202bff44db99463e93820d22, type: 2}
   coins: 1
+  audioHandler: {fileID: 11400000, guid: 713571850dc16cf4e8325e894ea66aff, type: 2}
 --- !u!1001 &247434704822910564
 PrefabInstance:
   m_ObjectHideFlags: 0

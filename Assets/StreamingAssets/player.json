@@ -1,7 +1,9 @@
 {
     "name": "Player",
     "level": 0,
-    "coins": 194,
+    "coins": 148,
     "endless_level": 0,
-    "endless_highscore": 0
+    "endless_highscore": 0,
+    "current_level": 0,
+    "is_endless": 1
 }

@@ -94,6 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 11400000, guid: ec6196db462cdc94193fb011d00a104d, type: 2}
   coins: 1
+  audioHandler: {fileID: 11400000, guid: 713571850dc16cf4e8325e894ea66aff, type: 2}
 --- !u!114 &6420530456991808513
 MonoBehaviour:
   m_ObjectHideFlags: 0

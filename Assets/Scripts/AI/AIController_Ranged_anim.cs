@@ -20,7 +20,11 @@ public class AIController_Ranged_anim : AIController_Ranged
 
     protected override void Attack()
     {
-        spellSetting[Random.Range(0, spellSetting.Length)].TryUseSpell(spawnPos, animator, target, null);
+        if (h.CanMove)
+        {
+            base.Attack();
+            spellSetting[Random.Range(0, spellSetting.Length)].TryUseSpell(spawnPos, animator, target, null);
+        }
         //animator.Play("attack_0" + Random.Range(1, aISettings.attackCount + 1));
     }
     protected override void MoveForward()

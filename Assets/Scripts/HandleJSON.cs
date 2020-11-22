@@ -198,16 +198,20 @@ public class JSONPlayer
     public int coins;
     public int endless_level;
     public int endless_highscore;
+    public int current_level;
+    public int is_endless;
     //public JSONLevel[] levels;
 
-    public JSONPlayer(string name, int level, int coins, int endless_level, int endless_highscore, JSONLevel[] levels)
+    public JSONPlayer(string name, int level, int coins, int endless_level, int endless_highscore, int current_level, int is_endless)
     {
         this.name = name;
         this.level = level;
         this.coins = coins;
         this.endless_level = endless_level;
         this.endless_highscore = endless_highscore;
-      //  this.levels = levels;
+        this.current_level = current_level;
+        this.is_endless = is_endless;
+        //  this.levels = levels;
     }
 }
 
@@ -221,6 +225,14 @@ public class JSONLevel
     public int silver;
     public int bronze;
     public JSONWave[] waves;
+
+    public string GetTrophy()
+    {
+        if (player_score > gold) return "Gold";
+        else if (player_score > silver) return "Silver";
+        else if (player_score > bronze) return "Bronze";
+        return "";
+    }
 }
 
 [System.Serializable]

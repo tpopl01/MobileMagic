@@ -16,6 +16,7 @@ public class WaveManager : MonoBehaviour
 
     public void SetWaves(Wave[] ws)
     {
+        index = 0;
         w = ws;
         for (int i = 0; i < w.Length; i++)
         {
@@ -55,9 +56,6 @@ public class WaveManager : MonoBehaviour
         unitsRemaining--;
         if(unitsRemaining <= 0)
         {
-            //End Level
-            Debug.Log("Level Complete");
-
             //start level ended event
             EventHandler.LevelComplete();
         }

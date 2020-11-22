@@ -8,7 +8,7 @@ public class AIController : MonoBehaviour
     protected Health target;
     [SerializeField] protected AISettings aISettings;
     protected Timer attackTimer = new Timer(0);
-    Health h;
+    protected Health h;
     ObjectPool_AI pool;
     protected Timer respawnTimer = new Timer(2);
     bool respawning = false;
@@ -73,6 +73,8 @@ public class AIController : MonoBehaviour
 
     protected virtual void Attack()
     {
+        Health_AI health_AI = (Health_AI)h;
+        health_AI.audioHandler.PlayAttackAudio(SoundManager.instance.GetAudioSource());
     }
 
     protected virtual void Stop()
