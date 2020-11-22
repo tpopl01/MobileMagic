@@ -30,8 +30,8 @@ public class SetupGame : MonoBehaviour
             new Wave(new int[]{ 0,0,0,0 }, 1, 1)
         };
 
-        InputController ic = GetComponentInChildren<InputController>();
-        ic.playerSpell = spells;
+     //   InputController ic = GetComponentInChildren<InputController>();
+     //   ic.playerSpell = spells;
         WaveManager wM = GetComponentInChildren<WaveManager>();
         wM.w = ws;
 

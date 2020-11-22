@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIWeapon : UIItem
+public class UIShop : UIItem
 {
+    int price = 0;
     string item_name;
-    int slot;
 
     public override void SetItem(JSONWeapon w)
     {
         base.SetItem(w);
+        price = w.price;
         item_name = w.item_name;
-        slot = w.slot;
     }
 
     public override void Use()
     {
-        PanelManager.instance.Equip(item_name, slot);
+        PanelManager.instance.Purchase(item_name, price);
     }
-
 }

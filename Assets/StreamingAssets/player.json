@@ -1,0 +1,13 @@
+{
+    "name": "Player",
+    "level": 0,
+    "coins": 90,
+    "endless_level": 0,
+    "endless_highscore": 0,
+    "levels": [
+        {
+            "level_name": "level 01",
+            "player_score": 0
+        }
+    ]
+}

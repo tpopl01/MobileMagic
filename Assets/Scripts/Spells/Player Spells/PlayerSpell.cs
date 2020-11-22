@@ -8,6 +8,4 @@ public class PlayerSpell : ScriptableObject
     public SpellSettingBase spell;
     public DetectMotion motion;
     public Sprite icon;
-    public int spell_level;
-    public int price;
 }

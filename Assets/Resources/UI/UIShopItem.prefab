@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -49.13}
-  m_SizeDelta: {x: 60, y: 61.823616}
+  m_AnchoredPosition: {x: 0, y: -51.13}
+  m_SizeDelta: {x: 60, y: 65.81138}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7531042315147073752
 CanvasRenderer:
@@ -94,10 +94,10 @@ GameObject:
   - component: {fileID: 7531042315745232407}
   - component: {fileID: 7531042315745232405}
   - component: {fileID: 7531042315745232404}
-  - component: {fileID: 7531042315745232394}
-  - component: {fileID: -3850682107722253449}
+  - component: {fileID: 1810716410668659405}
+  - component: {fileID: -6140584626753899445}
   m_Layer: 5
-  m_Name: UIWeapon
+  m_Name: UIShopItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,22 +163,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7531042315745232394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7531042315745232406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16a8fa27dfe791649a92a1569223526b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleText: {fileID: 7531042316589276529}
-  descText: {fileID: 7531042315147073755}
-  image: {fileID: 7531042316601795100}
---- !u!114 &-3850682107722253449
+--- !u!114 &1810716410668659405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -221,8 +206,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7531042315745232394}
-        m_TargetAssemblyTypeName: UIWeapon, Assembly-CSharp
+      - m_Target: {fileID: -6140584626753899445}
+        m_TargetAssemblyTypeName: UIShop, Assembly-CSharp
         m_MethodName: Use
         m_Mode: 1
         m_Arguments:
@@ -233,6 +218,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-6140584626753899445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531042315745232406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f4b5258ae9116449c577ec8c95f368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: {fileID: 7531042316589276529}
+  descText: {fileID: 7531042315147073755}
+  image: {fileID: 7531042316601795100}
 --- !u!1 &7531042316589276531
 GameObject:
   m_ObjectHideFlags: 0

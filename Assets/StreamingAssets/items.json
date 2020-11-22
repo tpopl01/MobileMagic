@@ -1,20 +1,59 @@
 {
-	"items":
-	[
-		{
-			"item_name": "Test Name",
-			"img": "08_Mage_Staff_nobg",
-			"req_level": 0,
-			"value": 0,
-			"price": 0
-		},
-		{
-			"item_name": "Test1 Name",
-			"img": "08_Mage_Staff_nobg",
-			"req_level": 0,
-			"value": 0,
-			"price": 0
-		}
-	]
-	
+    "items": [
+        {
+            "item_name": "wand01_blue",
+            "img": "08_Mage_Staff_nobg",
+            "req_level": 0,
+            "damage": 0,
+            "speed": 0,
+            "price": 0,
+            "purchased": 0,
+            "slot": 0,
+            "is_equipped": 0
+        },
+        {
+            "item_name": "wand02_blue",
+            "img": "08_Mage_Staff_nobg",
+            "req_level": 0,
+            "damage": 0,
+            "speed": 0,
+            "price": 0,
+            "purchased": 1,
+            "slot": 0,
+            "is_equipped": 1
+        },
+        {
+            "item_name": "wand02_green",
+            "img": "08_Mage_Staff_nobg",
+            "req_level": 0,
+            "damage": 0,
+            "speed": 0,
+            "price": 0,
+            "purchased": 1,
+            "slot": 0,
+            "is_equipped": 0
+        },
+        {
+            "item_name": "FireBall Spell",
+            "img": "08_Mage_Staff_nobg",
+            "req_level": 0,
+            "damage": 3,
+            "speed": 0,
+            "price": 0,
+            "purchased": 1,
+            "slot": 1,
+            "is_equipped": 1
+        },
+        {
+            "item_name": "Heal Self Spell",
+            "img": "08_Mage_Staff_nobg",
+            "req_level": 0,
+            "damage": 3,
+            "speed": 2,
+            "price": 50,
+            "purchased": 0,
+            "slot": 1,
+            "is_equipped": 0
+        }
+    ]
 }

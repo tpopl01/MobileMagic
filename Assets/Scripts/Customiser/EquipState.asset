@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7331c2b085abbb4da27844524d0c3df, type: 3}
-  m_Name: ShopState
+  m_Name: EquipState
   m_EditorClassIdentifier: 
   camPos: {x: -5.07, y: 11.9, z: -6.47}
-  camRot: {x: 7.29, y: -90, z: 0}
+  camRot: {x: 7.29, y: 90, z: 0}
   uiPanel: 1
-  prefab: UIShopItem
-  purchasedOnly: 0
+  prefab: UIWeapon
+  purchasedOnly: 1

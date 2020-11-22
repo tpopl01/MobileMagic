@@ -26,10 +26,34 @@ public class InputController : MonoBehaviour
     Plane plane;
     [SerializeField] Transform spellIconContainer;
     [SerializeField] UIBar_Autorefill spellPrefab;
+    [SerializeField] Transform weaponHolder;
 
     private void Start()
     {
         List<UIBar_Autorefill> b = new List<UIBar_Autorefill>();
+
+        JSONWeapon[] weapons = HandleJSON.GetAllEquippedWeapons();
+        playerSpell = new PlayerSpell[weapons.Length - 1];
+        bool equippedWeapon = false;
+        for (int i = 0; i < weapons.Length; i++)
+        {
+            if(weapons[i].slot == 0)
+            {
+                //equip weapon
+                Transform w = Instantiate(Resources.Load<Transform>("Weapons/" + weapons[i].item_name), weaponHolder);
+                w.localPosition = Vector3.zero;
+                w.localRotation = Quaternion.Euler(Vector3.zero);
+                equippedWeapon = true;
+            }
+            else
+            {
+                //equip spell
+                int index = i;
+                if (equippedWeapon) index--;
+                playerSpell[index] = Resources.Load<PlayerSpell>("Spells/" + weapons[i].item_name);
+            }
+        }
+
         for (int i = 0; i < playerSpell.Length; i++)
         {
             playerSpell[i].motion.Init();
