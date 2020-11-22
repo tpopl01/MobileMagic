@@ -58,11 +58,19 @@ public static class HandleJSON
 
         return p;
     }
-    //public static JSONLevel[] GetLevels()
-    //{
-    //    JSONPlayer p = GetPlayer();
-    //    return p.levels;
-    //}
+
+    public static JSONLevel[] GetLevels()
+    {
+        string json = File.ReadAllText(Application.streamingAssetsPath + JSON_LEVEL_PATH);
+        if (string.IsNullOrEmpty(json))
+        {
+            Debug.Log("Failed");
+            return null;
+        }
+        JsonLevelWrapper jW = JsonUtility.FromJson<JsonLevelWrapper>(json);
+        JSONLevel[] j = jW.levels;
+        return j;
+    }
 
     public static void WriteWeapon(JSONWeapon w)
     {
@@ -186,9 +194,22 @@ public class JSONPlayer
     }
 }
 
+[System.Serializable] public struct JsonLevelWrapper { public JSONLevel[] levels; }
 [System.Serializable]
 public class JSONLevel
 {
     public string level_name;
     public int player_score;
+    public int gold;
+    public int silver;
+    public int bronze;
+    public JSONWave[] waves;
+}
+
+[System.Serializable]
+public class JSONWave
+{
+    public int[] pattern;
+    public int timer;
+    public int pickable_count;
 }

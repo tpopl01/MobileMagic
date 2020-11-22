@@ -10,17 +10,17 @@
 			"waves":
 			[
 				{
-					"pattern":[{ 0, 0 }],
+					"pattern":[ 0, 0 ],
 					"timer": 3,
 					"pickable_count": 1
 				},
 				{
-					"pattern":[{ 0,0,0,1,1,2 }],
+					"pattern":[ 0,0,0,1,1,2 ],
 					"timer": 10,
 					"pickable_count": 0
 				},
 				{
-					"pattern":[{ 0,0,0,0 }],
+					"pattern":[ 0,0,0,0 ],
 					"timer": 1,
 					"pickable_count": 1
 				}

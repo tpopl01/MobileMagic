@@ -24,18 +24,22 @@ public class SetupGame : MonoBehaviour
 
     void Setup()
     {
-        Wave[] ws = {
-            new Wave(new int[] { 0, 0 }, 3, 1),
-            new Wave(new int[]{ 0,0,0,1,1,2 }, 10, 0),
-            new Wave(new int[]{ 0,0,0,0 }, 1, 1)
-        };
+        //Wave[] ws = {
+        //    new Wave(new int[] { 0, 0 }, 3, 1),
+        //    new Wave(new int[]{ 0,0,0,1,1,2 }, 10, 0),
+        //    new Wave(new int[]{ 0,0,0,0 }, 1, 1)
+        //};
 
-     //   InputController ic = GetComponentInChildren<InputController>();
-     //   ic.playerSpell = spells;
+        JSONWave[] jws = HandleJSON.GetLevels()[0].waves;
+        Wave[] fromJSON = new Wave[jws.Length];
+        for (int i = 0; i < jws.Length; i++)
+        {
+            fromJSON[i] = new Wave(jws[i]);
+        }
+
         WaveManager wM = GetComponentInChildren<WaveManager>();
-        wM.w = ws;
+        wM.w = fromJSON;
 
-        //TODO - retrieve from JSON then assign
     }
 
     public void AddCoins(int amount)

@@ -49,6 +49,13 @@ public class Wave
         this.pickables = pickableCount;
     }
 
+    public Wave(JSONWave wave)
+    {
+        this.spawnPattern = wave.pattern;
+        this.coolDownTime = wave.timer;
+        this.pickables = wave.pickable_count;
+    }
+
     public bool Spawned(ObjectPool_AI[] objectPools, Transform[] spots, ObjectPool_AI_Pickables p, Transform[] pickableSpots)
     {
         if (counter == spawnPattern.Length) return true;
