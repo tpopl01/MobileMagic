@@ -19,10 +19,12 @@ public class Health_AI_Pickable : Health_AI
     public void SetPool(ObjectPool_AI_Pickables p)
     {
         pool = p;
+        InitHealth(10);
     }
 
     public override void InitHealth(int maxHealth)
     {
+        if (!effectDeath) Init();
         base.InitHealth(maxHealth);
         respawning = false;
     }

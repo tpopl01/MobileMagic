@@ -1,0 +1,30 @@
+{
+    	"levels": 
+	[
+        	{
+            		"level_name": "level 01",
+            		"player_score": 0,
+			"gold": 32,
+			"silver": 27,
+			"bronze": 15,
+			"waves":
+			[
+				{
+					"pattern":[{ 0, 0 }],
+					"timer": 3,
+					"pickable_count": 1
+				},
+				{
+					"pattern":[{ 0,0,0,1,1,2 }],
+					"timer": 10,
+					"pickable_count": 0
+				},
+				{
+					"pattern":[{ 0,0,0,0 }],
+					"timer": 1,
+					"pickable_count": 1
+				}
+			]
+        	}
+    	]
+}

@@ -6,7 +6,7 @@ public class Health_AI_Pickable_AC : Health_AI_Pickable
 {
     Animator animator;
     const string pick_anim_name = "Pick";
-    const string reset_anim_name = "Empty";
+    const string reset_anim_name = "Reset";
 
     public override void Init()
     {

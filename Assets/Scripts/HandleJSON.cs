@@ -7,6 +7,7 @@ public static class HandleJSON
 {
     const string JSON_PATH = "/items.json";
     const string JSON_PLAYER_PATH = "/player.json";
+    const string JSON_LEVEL_PATH = "/level.json";
 
     public static JSONWeapon GetWeapon(string weap_name)
     {
@@ -57,11 +58,11 @@ public static class HandleJSON
 
         return p;
     }
-    public static JSONLevel[] GetLevels()
-    {
-        JSONPlayer p = GetPlayer();
-        return p.levels;
-    }
+    //public static JSONLevel[] GetLevels()
+    //{
+    //    JSONPlayer p = GetPlayer();
+    //    return p.levels;
+    //}
 
     public static void WriteWeapon(JSONWeapon w)
     {
@@ -172,7 +173,7 @@ public class JSONPlayer
     public int coins;
     public int endless_level;
     public int endless_highscore;
-    public JSONLevel[] levels;
+    //public JSONLevel[] levels;
 
     public JSONPlayer(string name, int level, int coins, int endless_level, int endless_highscore, JSONLevel[] levels)
     {
@@ -181,7 +182,7 @@ public class JSONPlayer
         this.coins = coins;
         this.endless_level = endless_level;
         this.endless_highscore = endless_highscore;
-        this.levels = levels;
+      //  this.levels = levels;
     }
 }
 

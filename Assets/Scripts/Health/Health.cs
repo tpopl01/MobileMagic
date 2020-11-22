@@ -11,7 +11,7 @@ public class Health : MonoBehaviour
     public bool IsDead { get; private set; } = false;
     [SerializeField] protected DeathEffects deathEffect;
 
-    GameObject effectDeath;
+    protected GameObject effectDeath;
 
     private void Start()
     {

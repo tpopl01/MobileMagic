@@ -11,17 +11,19 @@ public class ObjectPool_AI_Pickables : ObjectPool<Health_AI_Pickable>
         var ai = Get();
         if (ai == null)
         {
+            Debug.Log("No Pickable Available");
             return;
         }
 
+        ai.gameObject.SetActive(true);
         ai.SetPool(this);
         ai.transform.position = targetPos;
-        ai.gameObject.SetActive(true);
         active.Add(ai);
     }
 
     public bool Return(Health_AI_Pickable a)
     {
+        Debug.Log("Return");
         if (active.Contains(a))
         {
             ReturnObject(a);
