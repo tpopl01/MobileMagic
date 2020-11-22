@@ -6,9 +6,6 @@ using UnityEngine.UI;
 public class SetupGame : MonoBehaviour
 {
     [SerializeField] PlayerSpell[] spells;
-    int coins = 0;
-    [SerializeField]Text coinText;
-    const string COIN = "Coins: ";
 
     public static SetupGame instance;
     private void Awake()
@@ -19,13 +16,10 @@ public class SetupGame : MonoBehaviour
     private void Start()
     {
         Setup();
-        coinText.text = COIN + coins.ToString();
-        EventHandler.OnCoins += AddCoins;
     }
 
     private void OnDestroy()
     {
-        EventHandler.OnCoins -= AddCoins;
     }
 
     void Setup()
@@ -49,10 +43,6 @@ public class SetupGame : MonoBehaviour
 
     }
 
-    private void AddCoins(int amount)
-    {
-        coins+= amount;
-        coinText.text = COIN + coins.ToString();
-    }
+
 
 }
