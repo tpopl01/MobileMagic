@@ -142,6 +142,23 @@ public static class HandleJSON
         File.WriteAllText(Application.streamingAssetsPath + JSON_PLAYER_PATH, j);
     }
 
+    public static void WriteJsonLevel(JSONLevel level)
+    {
+        JSONLevel[] levels = GetLevels();
+        for (int i = 0; i < levels.Length; i++)
+        {
+            if(levels[i].level_name.Equals(level.level_name))
+            {
+                levels[i] = level;
+                JsonLevelWrapper jW = new JsonLevelWrapper();
+                jW.levels = levels;
+                string j = JsonUtility.ToJson(jW, true);
+                File.WriteAllText(Application.streamingAssetsPath + JSON_LEVEL_PATH, j);
+                break;
+            }
+        }
+    }
+
 }
 
 [System.Serializable] public struct JsonWrapper { public JSONWeapon[] items; }

@@ -7,7 +7,6 @@ public class LevelCompleteUI : MonoBehaviour
 {
     int coins = 0;
     [SerializeField] Text coinText;
-    const string COIN = "Coins: ";
 
     [SerializeField] GameObject victory;
     [SerializeField] GameObject defeat;
@@ -19,7 +18,7 @@ public class LevelCompleteUI : MonoBehaviour
     {
         EventHandler.OnLevelComplete += Victory;
         EventHandler.OnPlayerDeath += Defeat;
-        coinText.text = COIN + coins.ToString();
+        coinText.text = coins.ToString();
         EventHandler.OnCoins += AddCoins;
     }
 
@@ -33,12 +32,19 @@ public class LevelCompleteUI : MonoBehaviour
     private void Victory()
     {
         victory.SetActive(true);
-        JSONPlayer player = HandleJSON.GetPlayer();
-        player.coins += coins;
         points_victory.text = "Points: " + coins;
-        HandleJSON.WriteJsonPlayer(player);
 
         JSONLevel l = HandleJSON.GetLevels()[0];
+
+        if (coins > l.player_score)
+        {
+            JSONPlayer player = HandleJSON.GetPlayer();
+            player.coins += coins - l.player_score;
+            HandleJSON.WriteJsonPlayer(player);
+            l.player_score = coins;
+            HandleJSON.WriteJsonLevel(l);
+        }
+
         if(coins >= l.gold)
         {
             trophy.text = "Gold";
@@ -66,6 +72,6 @@ public class LevelCompleteUI : MonoBehaviour
     private void AddCoins(int amount)
     {
         coins += amount;
-        coinText.text = COIN + coins.ToString();
+        coinText.text = coins.ToString();
     }
 }
